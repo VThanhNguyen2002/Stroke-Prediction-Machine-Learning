@@ -1,0 +1,521 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    background: #eff1f7;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%; /* 1/5 chiều rộng */
+    height: 100vh; /* Chiều cao theo màn hình */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Hiển thị thanh cuộn nếu nội dung dài */
+}
+
+/* Logo */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Sidebar Menu */
+#sidebar_menu {
+    padding-top: 20px;
+    list-style: none;
+    flex-grow: 1; /* Cho menu mở rộng theo chiều dọc */
+}
+
+.side_menu_title {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.side_menu_title a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px; /* Điều chỉnh khoảng cách giữa các mục menu */
+    transition: all 0.3s ease;
+    font-size: 15px; /* Điều chỉnh kích thước chữ */
+    border-left: 5px solid transparent; /* Tạo đường viền bên trái cho mục menu */
+    font-weight: 600; /* Độ đậm của chữ */
+    letter-spacing: 0.5px; /* Khoảng cách giữa các ký tự */
+    text-transform: uppercase; /* Chuyển đổi chữ hoa */
+}
+
+.side_menu_title a:hover {
+    background-color: #6699FF;
+    color: #fff;
+    border-left-color: #6699FF; /* Thay đổi màu đường viền khi di chuột qua */
+}
+
+/* SVG Icons */
+.side_menu_title svg {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.main_content {
+    width: 80%; /* 4/5 chiều rộng */
+    margin-left: 20%; /* Để tạo khoảng cách với sidebar */
+    padding: 20px;
+    background-color: #fff; /* Màu nền cho phần main content */
+}
+
+/* CSS cho phần search_field-area */
+.search_inner {
+    position: absolute; /* Đặt vị trí tương đối để thẻ con sử dụng vị trí tương đối với thẻ cha */
+    border: 1px solid #f8f9fa;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 400px; /* Đặt chiều rộng của phần tử theo nội dung bên trong */
+}
+
+.search_field {
+    flex: 1;
+    padding-right: 10px;
+    position: relative; /* Đặt vị trí tương đối để thẻ con sử dụng vị trí tương đối với thẻ cha */
+}
+
+.search_field input[type="text"] {
+    width: 100%;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 20px;
+    outline: none;
+    
+}
+
+.search_inner a svg {
+    fill: #666666	; /* Màu sắc của biểu tượng trong nút tìm kiếm */
+}
+
+/* CSS cho header_notification_warp */
+.header_notification_warp li {
+    margin-right: 100px; /* Khoảng cách giữa các mục */
+    list-style: none; /* Ẩn dấu chấm trước mỗi mục */
+}
+
+.header_notification_warp li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-right: 30px; /* Khoảng cách giữa các mục */
+}
+
+.header_notification_warp li a img {
+    max-width: 100%; /* Đảm bảo hình ảnh trong mỗi mục hiển thị đúng kích thước */
+}
+
+.icon-hover:hover {
+    transform: scale(1.05); /* Phóng to khi di chuột vào */
+}
+
+/* CSS cho dropdown */
+.profile_info {
+    position: relative;
+    display: inline-block;
+}
+
+.profile_info .profile_info_iner {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    text-align: right; /* Các nội dung trong dropdown menu sẽ được căn lề phải */
+    padding: 20px;
+    top: 40px; /* Khoảng cách giữa tiêu đề và dropdown menu */
+    right: 0; /* Căn lề phải */
+    border-radius: 20px;
+}
+
+.profile_info a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.profile_info a:hover {
+    color: #6699FF;
+}
+
+.profile_info .profile_info_iner a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.profile_info .profile_info_iner a:hover {
+    color: #6699FF;
+}
+
+.profile_info:hover .profile_info_iner {
+    display: block;
+}
+
+.profile_info_iner p {
+    padding: 0px 15px;
+}
+
+.header_notification_warp h2:hover {
+    color: #6699FF;
+}
+
+.profile_info_iner h5 {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc; /* Đường gạch phân cách */
+    padding-bottom: 5px; /* Khoảng cách giữa đường gạch và các liên kết */
+}
+
+/* CSS cho tiêu đề dropdown */
+#dropdownMenu {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+}
+
+/* CSS cho mũi tên */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng chuyển đổi mượt mà */
+}
+
+.has-arrow:hover .arrow {
+    transform: rotate(90deg)
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Các cột sẽ căng hết không gian ngang trong phần header */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+.column {
+    flex: 1;    
+}
+
+div {
+    display: block;
+}
+
+.header_iner {
+    padding: 10px 15px;
+}
+
+.main_content_iner {
+    width: 80%; /* 4/5 chiều rộng */
+    margin-left: 20%; /* Để tạo khoảng cách với sidebar */
+    padding: 20px;
+    background-color: #f8f9fa; /* Màu nền cho phần main content */
+}
+
+.single_quick_activity {
+    /* Các thuộc tính chung cho tất cả các single_quick_activity */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.single_quick_activity h3 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.single_quick_activity p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.single_quick_activity .count_content {
+    flex: 1; 
+}
+
+/* Thiết lập màu nền và đường viền cho từng single_quick_activity */
+.bg-info {
+    width: 250px;
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng khi di chuột vào các single_quick_activity */
+.single_quick_activity:hover {
+    transform: scale(1.05); /* Phóng to khi di chuột vào */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Hiển thị bóng đổ */
+}
+
+.container {
+    width: 56%;
+    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+#canvas {
+    width: 100%;
+    margin: 20px;
+}
+
+.container-2 {
+    width: 40%;
+    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.chart-heading {
+    font-family: "Rubik", sans-serif;
+    color: #023047;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+.line {
+    font-family: "Rubik", sans-serif;
+    color: #023047;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc; /* Đường gạch phân cách */
+    padding-bottom: 5px; /* Khoảng cách giữa đường gạch và các liên kết */
+    width: 90%; /* Chiều rộng của đường phân cách */
+    margin-left: auto; /* Canh lề trái */
+    margin-right: auto; /* Canh lề phải */
+}
+
+.line-2 {
+    font-family: "Rubik", sans-serif;
+    color: #023047;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    margin-left: auto; /* Canh lề trái */
+    margin-right: auto; /* Canh lề phải */
+}
+
+.Activity_timeline {
+    text-align: left;
+    margin-left: 20px;
+    padding: 20px; 
+}
+
+.Activity_timeline h6 {
+    color: #6699FF;
+}
+
+.Activity_timeline p {
+    padding-left: 10px;
+}
+
+.Activity_timeline li:hover {
+    transform: scale(1.05); /* Phóng to khi di chuột vào */
+}
+
+/*Giao diện đăng nhập*/
+.login-container {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-container .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-container label {
+    font-weight: bold;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-container .show-password {
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    margin-left: 5px;
+  }
+  
+  .login-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } 
+
+  .login-container button a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .login-container button:hover {
+    background-color: #0056b3;
+  }
+
+  .login-container p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .login-container p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer{
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* Cố định footer dưới cùng */
+    position: fixed;
+    bottom: 0;
+  }
+
+/*Giao diện đăng ký*/
+/* Reset CSS */
+  .register-container {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-container .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .register-container label {
+    font-weight: bold;
+  }
+  
+  .register-container input[type="text"],
+  .register-container input[type="email"],
+  .register-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .register-container .show-password {
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    margin-left: 5px;
+  }
+  
+  .register-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .register-container button a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .register-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .register-container p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .register-container p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

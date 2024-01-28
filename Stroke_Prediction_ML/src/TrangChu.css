@@ -1,0 +1,21 @@
+/* Tệp trangchu.css */
+.title {
+    font-size: 60px;
+    font-family: 'Times New Roman', sans-serif;
+    color: #000033;
+}
+
+.centered-title {
+    font-size: 30px;
+    font-family: 'Times New Roman', sans-serif;
+    color: #FF00FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noidung {
+    font-size: 25px;
+    font-family: 'Times New Roman', sans-serif;
+    color: #FF3366;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="shortcut icon" href="img/title2.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <!-- Menubar bên trái -->
+    <nav class="sidebar">
+        <div class="logo">
+            <a href="TrangChu.html"><img src="img/logo.png" alt></a>
+        </div>
+        <ul id="sidebar_menu">
+            <!-- Mục Trang chủ -->
+            <li class="side_menu_title">
+                <a href="TrangChu.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                  </svg> Trang chủ</a>
+            </li>    
+            <!-- Mục Chuẩn đoán -->
+            <li class="side_menu_title">
+                <a href="TrangChuanDoanBenh.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clipboard-pulse" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Zm6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128L9.979 5.356Z"/>
+                  </svg> Chuẩn đoán</a></li>
+            </li>
+            <!-- Mục Danh sách bệnh nhân -->
+            <li class="side_menu_title">
+                <a href="TrangDanhSachBenhNhan.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                  </svg> Danh sách bệnh nhân</a></li>
+            </li>
+            <!-- Mục Lịch sử chuẩn đoán -->
+            <li class="side_menu_title">
+                <a href="TrangLichSuChuanDoan.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                    <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                    <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                    <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg> Lịch sử chuẩn đoán</a></li>
+            </li>
+            <!-- Mục Cài đặt -->
+            <li class="side_menu_title">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                  </svg> Cài đặt</a></li>
+            </li>      
+        </ul>
+    </nav>   
+
+    <!-- Main content bên phải -->
+    <!-- Header  -->
+    <section class="main_content">
+        <div class="container-fluid g-0">
+            <div class="row">
+                <div class="column">
+                    <div class="header_iner d-flex justify-content-between align-items-center">
+                        <div class="serach_field-area">
+                            <!-- Múc tìm kiếm  -->
+                            <div class="search_inner">
+                                <div class="search_field">
+                                    <input style="font-weight: 500; font-size: 18px;" type="text" placeholder="Tìm kiếm tại đây...">
+                                </div>
+                                <a href="#" style="margin-right: 10px; margin-top: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"  viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                 </svg></a>
+                            </div>
+                        </div>
+                        <div class="header_iner d-flex justify-content-between align-items-center">
+                            <div class="header_notification_warp d-flex align-items-center">     
+                                
+                                <!-- Mục liên hệ  -->
+                                <li>
+                                    <a class="icon-hover" style="float: right;" href="#"> <img src="img/bubble_chat_icon.png" alt> </a>
+                                </li>
+                                <!-- Mục thông báo  -->
+                                <li>
+                                    <a class="icon-hover" style="float: right;" href="#"> <img src="img/bell_icon.png" alt> </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Body  -->
+    <section class="main_content_iner">
+        <!-- Mục thống kê số lượng  -->
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="single_element">
+                        <div class="quick_activity">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- Mục số lượng bác sĩ  -->
+                                    <div class="single_quick_activity d-flex bg-info">
+                                        <div class="icon">
+                                            <img width="50" height="50" src="img/docter.png" alt>
+                                        </div>
+                                        <div class="count_content">
+                                            <h3 style="color:#3498db"><span class="counter" data-count="20">20</span> </h3>
+                                            <p style="color:#3498db">Bác sĩ</p>
+                                        </div>
+                                    </div>
+                                    <!-- Mục số lượng bệnh nhân  -->
+                                    <div class="single_quick_activity d-flex bg-info">
+                                        <div class="icon">
+                                            <img width="50" height="50" src="img/patient.png" alt>
+                                        </div>
+                                        <div class="count_content">
+                                            <h3 style="color:#e74c3c"><span class="counter" data-count="110">110</span> </h3>
+                                            <p style="color:#e74c3c">Bệnh nhân</p>
+                                        </div>
+                                    </div>
+                                    <!-- Mục số lượng người đã mắc bệnh đột quỵ -->
+                                    <div class="single_quick_activity d-flex bg-info">
+                                        <div class="icon">
+                                            <img width="50" height="50" src="img/got sick.png" alt>
+                                        </div>
+                                        <div class="count_content">
+                                            <h3 style="color:#2ecc71"><span class="counter" data-count="53">53</span> </h3>
+                                            <p style="color:#2ecc71">Số người mắc bệnh</p>
+                                        </div>
+                                    </div>
+                                    <!-- Mục số lượng phản hồi  -->
+                                    <div class="single_quick_activity d-flex bg-info">
+                                        <div class="icon">
+                                            <img width="50" height="50" src="img/feedback.png" alt>
+                                        </div>
+                                        <div class="count_content">
+                                            <h3 style="color:#f39c12"><span class="counter" data-count="320">320</span> </h3>
+                                            <p style="color:#f39c12">Phản hồi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>  
+        <!-- Mục thống kê số lượng -->
+        <div class="row">
+            <div class="container">
+                <div class="chart-heading">Thống kê tỉ lệ mắc bệnh đột quỵ</div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <!-- Mục phản hồi của bệnh nhân-->
+            <div class="container-2">
+                <div class="line">Phản hồi của bệnh nhân</div>
+                <div class="Activity_timeline">
+                    <ul>
+                        <li>
+                            <h6>5 phút trước</h6>
+                            <p>Chuẩn đoán bệnh rất chuẩn</p>
+                        </li>
+                        <li>
+                            <h6>5 phút trước</h6>
+                            <p>Tôi rất hài lòng</p>
+                        </li>
+                        <li>
+                            <h6>6 phút trước</h6>
+                            <p>Hài lòng với dịch vụ</p>
+                        </li>
+                        <li>
+                            <h6>6 phút trước</h6>
+                            <p>Chuẩn đoán bệnh chuẩn không phải chỉnh</p>
+                        </li>
+                        <li>
+                            <h6>8 phút trước</h6>
+                            <p>Tôi yêu thích các dịch vụ ở đây  </p>
+                        </li>
+                        <li>
+                            <h6>10 phút trước</h6>
+                            <p>Chăm sóc khách hàng tốt, tôi rất hài lòng</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer  -->
+    <section class="main_content">
+        <div class="footer_iner container-fluid g-0">
+            <div class="row">
+                <div class="info">
+                    <b style="font-size: 32px;color: #6699FF;">CHUYÊN CHUẨN ĐOÁN BỆNH ĐỘT QUỴ</b>
+                    <p><b>Địa Chỉ:</b> 140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố Hồ Chí Minh</p>
+                    <p><b>Thời Gian Làm Việc:</b> 8:00 - 20:00 (Cả Tuần)</p>
+                    <p><b>Số điện thoại:</b> <a style="color: #000;" href="#"> (028)XX XXX XXX</a></p>
+                </div>
+                <div class="info">
+                    
+                </div>
+                <div class="logo">
+                    <a href="TrangChu.html"><img src="img/logo.png" alt></a>
+                </div>       
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
